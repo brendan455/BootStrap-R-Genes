@@ -1,18 +1,18 @@
-#sélection du Dossier de travail
-setwd("D:/Documents/Cours_Master_1_Bioinformatique/Statistique sur les grands échantillons/Bootstrap") 
+#sÃ©lection du Dossier de travail
+setwd("Directory") 
 
-#importation des données de "basegenes"
+#importation des donnÃ©es de "basegenes"
 basegene<-read.table("basegenes.txt", header= FALSE, sep=";", dec=".", na.strings="NA")
 
 
-#importation des données de "baseclinique"
+#importation des donnÃ©es de "baseclinique"
 baseclinique<-read.table("baseclinique.csv", header= TRUE, sep=";", dec=".", na.strings="NA")
 
 
 #extraction de baseclinique des individu servant a l'apprentissage
 
 apprentissage<-baseclinique[baseclinique$Analysis=="Training",]
-#extraction de baseclinique des individu servant à la validatione
+#extraction de baseclinique des individu servant Ã  la validatione
 validation<-baseclinique[baseclinique$Analysis=="Validation",]
 
 ###
